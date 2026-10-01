@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Acara - NiceSchool</title>
+  <meta name="description" content="Jadwal Acara dan Kegiatan NiceSchool">
+  <meta name="keywords" content="NiceSchool, Acara, Agenda, Kegiatan Sekolah">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="events-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <i class="bi bi-buildings"></i>
+        <h1 class="sitename">NiceSchool</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li class="dropdown"><a href="about.html"><span>Tentang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="about.html">Tentang Kami</a></li>
+              <li><a href="admissions.html">Penerimaan</a></li>
+              <li><a href="academics.html">Akademik</a></li>
+              <li><a href="faculty-staff.html">Pengajar &amp; Staf</a></li>
+              <li><a href="campus-facilities.html">Fasilitas Kampus</a></li>
+            </ul>
+          </li>
+
+          <li><a href="students-life.html">Kehidupan Siswa</a></li>
+          <li><a href="news.html">Berita</a></li>
+          <li><a href="events.html" class="active">Acara</a></li>
+          <li><a href="alumni.html">Alumni</a></li>
+          <li class="dropdown"><a href="#"><span>Halaman Lain</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="news-details.html">Detail Berita</a></li>
+              <li><a href="event-details.html">Detail Acara</a></li>
+              <li><a href="privacy.html">Privasi</a></li>
+              <li><a href="terms-of-service.html">Syarat Layanan</a></li>
+              <li><a href="404.html">Error 404</a></li>
+              <li><a href="starter-page.html">Halaman Awal</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Sub Menu 1</a></li>
+              <li class="dropdown"><a href="#"><span>Dropdown Lanjutan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Sub Menu Lanjutan 1</a></li>
+                  <li><a href="#">Sub Menu Lanjutan 2</a></li>
+                  <li><a href="#">Sub Menu Lanjutan 3</a></li>
+                  <li><a href="#">Sub Menu Lanjutan 4</a></li>
+                  <li><a href="#">Sub Menu Lanjutan 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Sub Menu 2</a></li>
+              <li><a href="#">Sub Menu 3</a></li>
+              <li><a href="#">Sub Menu 4</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" style="background-image: url(assets/img/education/showcase-1.webp);">
+      <div class="container position-relative">
+        <h1>Acara</h1>
+        <p>Jadwal lengkap kegiatan, seminar, dan acara penting di NiceSchool.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Beranda</a></li>
+            <li class="current">Acara</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Events 2 Section -->
+    <section id="events-2" class="events-2 section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4">
+          <div class="col-lg-8">
+            <div class="events-list">
+              <div class="event-item" data-aos="fade-up">
+                <div class="event-date">
+                  <span class="day">15</span>
+                  <span class="month">JUN</span>
+                </div>
+                <div class="event-content">
+                  <h3>Pameran Sains Tahunan</h3>
+                  <div class="event-meta">
+                    <p><i class="bi bi-clock"></i> 09:00 - 16:00 WIB</p>
+                    <p><i class="bi bi-geo-alt"></i> Auditorium Kampus Utama</p>
+                  </div>
+                  <p>Pameran karya riset, eksperimen ilmiah, dan inovasi teknologi buatan siswa.</p>
+                  <a href="event-details.html" class="btn-event">Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div><!-- End Event Item -->
+
+              <div class="event-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="event-date">
+                  <span class="day">22</span>
+                  <span class="month">JUN</span>
+                </div>
+                <div class="event-content">
+                  <h3>Pertemuan Orang Tua &amp; Guru</h3>
+                  <div class="event-meta">
+                    <p><i class="bi bi-clock"></i> 13:00 - 18:00 WIB</p>
+                    <p><i class="bi bi-geo-alt"></i> Ruang Kelas</p>
+                  </div>
+                  <p>Konsultasi perkembangan belajar dan evaluasi hasil akademik siswa bersama pengajar.</p>
+                  <a href="event-details.html" class="btn-event">Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div><!-- End Event Item -->
+
+              <div class="event-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="event-date">
+                  <span class="day">30</span>
+                  <span class="month">JUN</span>
+                </div>
+                <div class="event-content">
+                  <h3>Final Turnamen Olahraga Musim Panas</h3>
+                  <div class="event-meta">
+                    <p><i class="bi bi-clock"></i> 14:30 - 17:30 WIB</p>
+                    <p><i class="bi bi-geo-alt"></i> Kompleks Olahraga</p>
+                  </div>
+                  <p>Babak puncak kompetisi olahraga antar kelas yang diikuti seluruh siswa NiceSchool.</p>
+                  <a href="event-details.html" class="btn-event">Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div><!-- End Event Item -->
+
+              <div class="event-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="event-date">
+                  <span class="day">05</span>
+                  <span class="month">JUL</span>
+                </div>
+                <div class="event-content">
+                  <h3>Upacara Kelulusan Angkatan 2025</h3>
+                  <div class="event-meta">
+                    <p><i class="bi bi-clock"></i> 10:00 - 13:00 WIB</p>
+                    <p><i class="bi bi-geo-alt"></i> Auditorium Pusat</p>
+                  </div>
+                  <p>Prosesi kelulusan dan penyerahan ijazah bagi para siswa angkatan 2025.</p>
+                  <a href="event-details.html" class="btn-event">Selengkapnya <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div><!-- End Event Item -->
+            </div>
+
+            <div class="pagination-wrapper" data-aos="fade-up" data-aos-delay="400">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1"><i class="bi bi-chevron-left"></i></a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="sidebar">
+              <div class="sidebar-item" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="sidebar-title">Jadwal Acara</h3>
+                <div class="event-calendar">
+                  <div class="calendar-header">
+                    <h4>Juni 2025</h4>
+                  </div>
+                  <div class="calendar-body">
+                    <div class="weekdays">
+                      <div>Min</div>
+                      <div>Sen</div>
+                      <div>Sel</div>
+                      <div>Rab</div>
+                      <div>Kam</div>
+                      <div>Jum</div>
+                      <div>Sab</div>
+                    </div>
+                    <div class="days">
+                      <div class="day other-month">28</div>
+                      <div class="day other-month">29</div>
+                      <div class="day other-month">30</div>
+                      <div class="day other-month">31</div>
+                      <div class="day">1</div>
+                      <div class="day">2</div>
+                      <div class="day">3</div>
+                      <div class="day">4</div>
+                      <div class="day">5</div>
+                      <div class="day">6</div>
+                      <div class="day">7</div>
+                      <div class="day">8</div>
+                      <div class="day">9</div>
+                      <div class="day">10</div>
+                      <div class="day">11</div>
+                      <div class="day">12</div>
+                      <div class="day">13</div>
+                      <div class="day">14</div>
+                      <div class="day has-event">15</div>
+                      <div class="day">16</div>
+                      <div class="day">17</div>
+                      <div class="day">18</div>
+                      <div class="day">19</div>
+                      <div class="day">20</div>
+                      <div class="day">21</div>
+                      <div class="day has-event">22</div>
+                      <div class="day">23</div>
+                      <div class="day">24</div>
+                      <div class="day">25</div>
+                      <div class="day">26</div>
+                      <div class="day">27</div>
+                      <div class="day">28</div>
+                      <div class="day">29</div>
+                      <div class="day has-event">30</div>
+                      <div class="day other-month">1</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sidebar-item featured-event" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="sidebar-title">Acara Unggulan</h3>
+                <div class="featured-event-content">
+                  <img src="assets/img/education/events-5.webp" alt="Acara Unggulan" class="img-fluid">
+                  <h4>Festival Seni Tahunan</h4>
+                  <p><i class="bi bi-calendar-event"></i> 15-17 Juli 2025</p>
+                  <p>Pentas karya seni pertunjukan, pameran lukis, dan hiburan kreasi siswa.</p>
+                  <a href="event-details.html" class="btn-register">Daftar Sekarang</a>
+                </div>
+              </div>
+
+              <div class="sidebar-item" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="sidebar-title">Kategori Acara</h3>
+                <div class="categories">
+                  <ul>
+                    <li><a href="#">Akademik <span>(12)</span></a></li>
+                    <li><a href="#">Olahraga <span>(8)</span></a></li>
+                    <li><a href="#">Kebudayaan <span>(6)</span></a></li>
+                    <li><a href="#">Workshop <span>(4)</span></a></li>
+                    <li><a href="#">Konferensi <span>(3)</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Events 2 Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">NiceSchool</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Jl. Pendidikan No. 108</p>
+            <p>Jakarta, Indonesia 12340</p>
+            <p class="mt-3"><strong>Telepon:</strong> <span>+62 21 5589 5548</span></p>
+            <p><strong>Email:</strong> <span>info@niceschool.sch.id</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Tautan Berguna</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="academics.html">Akademik</a></li>
+            <li><a href="terms-of-service.html">Syarat &amp; Ketentuan</a></li>
+            <li><a href="privacy.html">Kebijakan Privasi</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Layanan Kami</h4>
+          <ul>
+            <li><a href="academics.html">Pendidikan Utama</a></li>
+            <li><a href="students-life.html">Kegiatan Siswa</a></li>
+            <li><a href="admissions.html">Konsultasi Pendaftaran</a></li>
+            <li><a href="campus-facilities.html">Fasilitas Kampus</a></li>
+            <li><a href="alumni.html">Jaringan Alumni</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Program Studi</h4>
+          <ul>
+            <li><a href="academics.html">Teknik Informatika</a></li>
+            <li><a href="academics.html">Administrasi Bisnis</a></li>
+            <li><a href="academics.html">Ilmu Kedokteran</a></li>
+            <li><a href="academics.html">Sains Data</a></li>
+            <li><a href="academics.html">Teknik Mesin</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Informasi</h4>
+          <ul>
+            <li><a href="admissions.html">Pendaftaran</a></li>
+            <li><a href="admissions.html">Beasiswa</a></li>
+            <li><a href="students-life.html">Ekstrakurikuler</a></li>
+            <li><a href="events.html">Jadwal Acara</a></li>
+            <li><a href="contact.html">Kontak Kami</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">NiceSchool</strong> <span>Hak Cipta Dilindungi</span></p>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

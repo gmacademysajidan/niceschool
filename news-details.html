@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Detail Berita - NiceSchool</title>
+  <meta name="description" content="Detail Berita dan Artikel NiceSchool">
+  <meta name="keywords" content="NiceSchool, Detail Berita, Artikel, Desain UI">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="news-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
+        <i class="bi bi-buildings"></i>
+        <h1 class="sitename">NiceSchool</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li class="dropdown"><a href="about.html"><span>Tentang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="about.html">Tentang Kami</a></li>
+              <li><a href="admissions.html">Penerimaan</a></li>
+              <li><a href="academics.html">Akademik</a></li>
+              <li><a href="faculty-staff.html">Pengajar &amp; Staf</a></li>
+              <li><a href="campus-facilities.html">Fasilitas Kampus</a></li>
+            </ul>
+          </li>
+
+          <li><a href="students-life.html">Kehidupan Siswa</a></li>
+          <li><a href="news.html">Berita</a></li>
+          <li><a href="events.html">Acara</a></li>
+          <li><a href="alumni.html">Alumni</a></li>
+          <li class="dropdown"><a href="#"><span>Halaman Lain</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="news-details.html" class="active">Detail Berita</a></li>
+              <li><a href="event-details.html">Detail Acara</a></li>
+              <li><a href="privacy.html">Privasi</a></li>
+              <li><a href="terms-of-service.html">Syarat Layanan</a></li>
+              <li><a href="404.html">Error 404</a></li>
+              <li><a href="starter-page.html">Halaman Awal</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Sub Menu 1</a></li>
+              <li class="dropdown"><a href="#"><span>Dropdown Lanjutan</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Sub Menu Lanjutan 1</a></li>
+                  <li><a href="#">Sub Menu Lanjutan 2</a></li>
+                  <li><a href="#">Sub Menu Lanjutan 3</a></li>
+                  <li><a href="#">Sub Menu Lanjutan 4</a></li>
+                  <li><a href="#">Sub Menu Lanjutan 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Sub Menu 2</a></li>
+              <li><a href="#">Sub Menu 3</a></li>
+              <li><a href="#">Sub Menu 4</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Kontak</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" style="background-image: url(assets/img/education/showcase-1.webp);">
+      <div class="container position-relative">
+        <h1>Detail Berita</h1>
+        <p>Artikel mendalam seputar dunia pendidikan, teknologi, dan inovasi.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Beranda</a></li>
+            <li class="current">Detail Berita</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Blog Details Section -->
+    <section id="blog-details" class="blog-details section">
+      <div class="container" data-aos="fade-up">
+
+        <article class="article">
+          <div class="article-header">
+            <div class="meta-categories" data-aos="fade-up">
+              <a href="#" class="category">Teknologi</a>
+              <a href="#" class="category">Inovasi</a>
+            </div>
+
+            <h1 class="title" data-aos="fade-up" data-aos-delay="100">Evolusi Desain Antarmuka Pengguna: Dari Skeuomorph ke Neumorph</h1>
+
+            <div class="article-meta" data-aos="fade-up" data-aos-delay="200">
+              <div class="author">
+                <img src="assets/img/person/person-m-6.webp" alt="Penulis" class="author-img">
+                <div class="author-info">
+                  <h4>David Wilson</h4>
+                  <span>Ketua Tim Desain UI/UX</span>
+                </div>
+              </div>
+              <div class="post-info">
+                <span><i class="bi bi-calendar4-week"></i> 15 April 2025</span>
+                <span><i class="bi bi-clock"></i> 10 mnt baca</span>
+                <span><i class="bi bi-chat-square-text"></i> 32 Komentar</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-featured-image" data-aos="zoom-in">
+            <img src="assets/img/blog/blog-hero-1.webp" alt="Evolusi Desain UI" class="img-fluid">
+          </div>
+
+          <div class="article-wrapper">
+            <aside class="table-of-contents" data-aos="fade-left">
+              <h3>Daftar Isi</h3>
+              <nav>
+                <ul>
+                  <li><a href="#introduction" class="active">Pendahuluan</a></li>
+                  <li><a href="#skeuomorphism">Era Skeuomorfik</a></li>
+                  <li><a href="#flat-design">Revolusi Desain Datar</a></li>
+                  <li><a href="#material-design">Material Design</a></li>
+                  <li><a href="#neumorphism">Perkembangan Neumorfisme</a></li>
+                  <li><a href="#future">Tren Masa Depan</a></li>
+                </ul>
+              </nav>
+            </aside>
+
+            <div class="article-content">
+              <div class="content-section" id="introduction" data-aos="fade-up">
+                <p class="lead">
+                  Perjalanan desain antarmuka pengguna ditandai oleh pergeseran estetika yang signifikan dalam setiap era digital.
+                </p>
+
+                <p>
+                  Perkembangan ini mencerminkan kemajuan teknologi sekaligus perubahan harapan dan gaya interaksi pengguna dengan produk digital.
+                </p>
+
+                <div class="highlight-quote">
+                  <blockquote>
+                    <p>Desain bukan hanya tentang tampilan dan rasa, tetapi tentang bagaimana itu bekerja.</p>
+                    <cite>Steve Jobs</cite>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="content-section" id="skeuomorphism" data-aos="fade-up">
+                <h2>Era Skeuomorfik</h2>
+                <div class="image-with-caption right">
+                  <img src="assets/img/blog/blog-hero-2.webp" alt="Contoh Desain Skeuomorfik" class="img-fluid" loading="lazy">
+                  <figcaption>Desain awal dengan elemen tekstur fisik</figcaption>
+                </div>
+                <p>
+                  Desain skeuomorfik meniru objek dunia nyata ke dalam bentuk digital untuk memudahkan transisi pemahaman pengguna.
+                </p>
+
+                <div class="feature-points">
+                  <div class="point">
+                    <i class="bi bi-layers"></i>
+                    <div>
+                      <h4>Tekstur Realistis</h4>
+                      <p>Representasi mendetail seperti kulit, logam, dan kertas</p>
+                    </div>
+                  </div>
+                  <div class="point">
+                    <i class="bi bi-lightbulb"></i>
+                    <div>
+                      <h4>Metafora Akrab</h4>
+                      <p>Elemen digital yang meniru bentuk fisiknya</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-section" id="flat-design" data-aos="fade-up">
+                <h2>Revolusi Desain Datar</h2>
+                <p>
+                  Desain datar menekankan kesederhanaan, kejelasan visual, dan efisiensi waktu muat halaman antarmuka.
+                </p>
+
+                <div class="comparison-grid">
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <div class="comparison-card">
+                        <div class="icon"><i class="bi bi-check-circle"></i></div>
+                        <h4>Keunggulan</h4>
+                        <ul>
+                          <li>Waktu muat lebih cepat</li>
+                          <li>Skalabilitas lebih baik</li>
+                          <li>Hierarki visual yang bersih</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="comparison-card">
+                        <div class="icon"><i class="bi bi-exclamation-circle"></i></div>
+                        <h4>Tantangan</h4>
+                        <ul>
+                          <li>Isyarat visual berkurang</li>
+                          <li>Potensi masalah kejelasan</li>
+                          <li>Persepsi kedalaman terbatas</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-section" id="material-design" data-aos="fade-up">
+                <h2>Material Design: Keseimbangan Ideal</h2>
+                <p>
+                  Google Material Design menggabungkan kesederhanaan desain datar dengan bayangan dan kedalaman yang halus.
+                </p>
+
+                <div class="key-principles">
+                  <div class="principle">
+                    <span class="number">01</span>
+                    <h4>Sifat Fisik</h4>
+                    <p>Permukaan dan tepi memberikan petunjuk interaksi yang jelas</p>
+                  </div>
+                  <div class="principle">
+                    <span class="number">02</span>
+                    <h4>Grafik Tegas</h4>
+                    <p>Pilihan warna cerdas dan tata letak yang teratur</p>
+                  </div>
+                  <div class="principle">
+                    <span class="number">03</span>
+                    <h4>Gerakan Bermakna</h4>
+                    <p>Animasi halus yang memperjelas tindakan pengguna</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-section" id="neumorphism" data-aos="fade-up">
+                <h2>Perkembangan Neumorfisme</h2>
+                <p>
+                  Neumorfisme menciptakan permukaan lembut yang tampak menyatu dan timbul dari latar belakang.
+                </p>
+
+                <div class="info-box">
+                  <div class="icon">
+                    <i class="bi bi-info-circle"></i>
+                  </div>
+                  <div class="content">
+                    <h4>Karakteristik Utama</h4>
+                    <p>Gaya ini mengandalkan permainan bayangan dan pencahayaan lembut untuk menciptakan efek permukaan 3D.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-section" id="future" data-aos="fade-up">
+                <h2>Tren Masa Depan</h2>
+                <p>
+                  Desain antarmuka masa depan akan semakin personal, adaptif, dan terintegrasi dengan kecerdasan buatan.
+                </p>
+
+                <div class="future-trends">
+                  <div class="trend">
+                    <i class="bi bi-phone"></i>
+                    <h4>Antarmuka Adaptif</h4>
+                    <p>Antarmuka yang menyesuaikan otomatis dengan perilaku pengguna</p>
+                  </div>
+                  <div class="trend">
+                    <i class="bi bi-eye"></i>
+                    <h4>Pengalaman Imersif</h4>
+                    <p>Integrasi elemen AR dan VR dalam aplikasi harian</p>
+                  </div>
+                  <div class="trend">
+                    <i class="bi bi-hand-index"></i>
+                    <h4>Kontrol Gestur</h4>
+                    <p>Interaksi berbasis gerakan tubuh yang semakin natural</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-footer" data-aos="fade-up">
+            <div class="share-article">
+              <h4>Bagikan Artikel Ini</h4>
+              <div class="share-buttons">
+                <a href="#" class="share-button twitter">
+                  <i class="bi bi-twitter-x"></i>
+                  <span>Bagikan di X</span>
+                </a>
+                <a href="#" class="share-button facebook">
+                  <i class="bi bi-facebook"></i>
+                  <span>Bagikan di Facebook</span>
+                </a>
+                <a href="#" class="share-button linkedin">
+                  <i class="bi bi-linkedin"></i>
+                  <span>Bagikan di LinkedIn</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="article-tags">
+              <h4>Topik Terkait</h4>
+              <div class="tags">
+                <a href="#" class="tag">Desain UI</a>
+                <a href="#" class="tag">Pengalaman Pengguna</a>
+                <a href="#" class="tag">Tren Desain</a>
+                <a href="#" class="tag">Inovasi</a>
+                <a href="#" class="tag">Teknologi</a>
+              </div>
+            </div>
+          </div>
+
+        </article>
+
+      </div>
+    </section><!-- /Blog Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">NiceSchool</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Jl. Pendidikan No. 108</p>
+            <p>Jakarta, Indonesia 12340</p>
+            <p class="mt-3"><strong>Telepon:</strong> <span>+62 21 5589 5548</span></p>
+            <p><strong>Email:</strong> <span>info@niceschool.sch.id</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Tautan Berguna</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="academics.html">Akademik</a></li>
+            <li><a href="terms-of-service.html">Syarat &amp; Ketentuan</a></li>
+            <li><a href="privacy.html">Kebijakan Privasi</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Layanan Kami</h4>
+          <ul>
+            <li><a href="academics.html">Pendidikan Utama</a></li>
+            <li><a href="students-life.html">Kegiatan Siswa</a></li>
+            <li><a href="admissions.html">Konsultasi Pendaftaran</a></li>
+            <li><a href="campus-facilities.html">Fasilitas Kampus</a></li>
+            <li><a href="alumni.html">Jaringan Alumni</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Program Studi</h4>
+          <ul>
+            <li><a href="academics.html">Teknik Informatika</a></li>
+            <li><a href="academics.html">Administrasi Bisnis</a></li>
+            <li><a href="academics.html">Ilmu Kedokteran</a></li>
+            <li><a href="academics.html">Sains Data</a></li>
+            <li><a href="academics.html">Teknik Mesin</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Informasi</h4>
+          <ul>
+            <li><a href="admissions.html">Pendaftaran</a></li>
+            <li><a href="admissions.html">Beasiswa</a></li>
+            <li><a href="students-life.html">Ekstrakurikuler</a></li>
+            <li><a href="events.html">Jadwal Acara</a></li>
+            <li><a href="contact.html">Kontak Kami</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">NiceSchool</strong> <span>Hak Cipta Dilindungi</span></p>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
