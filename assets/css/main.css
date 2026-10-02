@@ -146,45 +146,63 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(255, 255, 255, 0);
+  --background-color: rgba(15, 23, 42, 0.45);
   --default-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 15px 0;
-  transition: all 0.5s;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 16px 0;
+  transition: all 0.4s ease;
   z-index: 997;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header .container-fluid,
+.header .container-xl {
+  padding-left: 35px;
+  padding-right: 35px;
+  max-width: 100%;
 }
 
 .header .logo {
   line-height: 1;
+  text-decoration: none;
+  margin-right: auto;
 }
 
 .header .logo img {
-  max-height: 32px;
-  margin-right: 8px;
+  max-height: 36px;
+  margin-right: 10px;
 }
 
 .header .logo i {
-  font-size: 24px;
-  margin-right: 6px;
+  font-size: 26px;
+  margin-right: 8px;
+  color: var(--accent-light-color, #D1FAE5);
+  transition: transform 0.3s ease;
+}
+
+.header .logo:hover i {
+  transform: scale(1.1);
 }
 
 .header .logo h1 {
-  font-size: 28px;
+  font-size: 26px;
   margin: 0;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: -0.5px;
   color: var(--heading-color);
-}
-
-.scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(0, 0, 0, 0.8);
+  --background-color: rgba(15, 23, 42, 0.92);
+  padding: 12px 0;
+  box-shadow: 0px 10px 30px rgba(15, 23, 42, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 /*--------------------------------------------------------------
@@ -196,12 +214,13 @@ h6 {
     padding: 0;
   }
 
-  .navmenu ul {
+  .navmenu > ul {
     margin: 0;
     padding: 0;
     display: flex;
     list-style: none;
     align-items: center;
+    gap: 4px;
   }
 
   .navmenu li {
@@ -210,100 +229,130 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
-    padding: 18px 15px;
-    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 8px 16px;
+    font-size: 15px;
     font-family: var(--nav-font);
-    font-weight: 400;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
-    transition: 0.3s;
+    border-radius: 20px;
+    transition: all 0.25s ease;
   }
 
   .navmenu a i,
   .navmenu a:focus i {
-    font-size: 12px;
+    font-size: 11px;
     line-height: 0;
-    margin-left: 5px;
-    transition: 0.3s;
+    margin-left: 6px;
+    transition: transform 0.25s ease;
   }
 
-  .navmenu li:last-child a {
-    padding-right: 0;
+  .navmenu li:hover > a i {
+    transform: rotate(180deg);
   }
 
-  .navmenu li:hover>a,
+  .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: #ffffff;
+    background: var(--accent-color, #047857);
+    box-shadow: 0 4px 12px rgba(4, 120, 87, 0.3);
   }
 
   .navmenu .dropdown ul {
     margin: 0;
-    padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
+    padding: 8px;
+    background: #ffffff;
     display: block;
     position: absolute;
     visibility: hidden;
-    left: 14px;
-    top: 130%;
+    left: 0;
+    top: calc(100% + 12px);
     opacity: 0;
-    transition: 0.3s;
-    border-radius: 4px;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 12px;
     z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 15px 35px rgba(15, 23, 42, 0.15);
+    border: 1px solid rgba(15, 23, 42, 0.08);
   }
 
   .navmenu .dropdown ul li {
-    min-width: 200px;
+    min-width: 210px;
   }
 
   .navmenu .dropdown ul a {
-    padding: 10px 20px;
-    font-size: 15px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
     text-transform: none;
-    color: var(--nav-dropdown-color);
+    color: #0F172A;
+    border-radius: 8px;
+    background: transparent;
   }
 
   .navmenu .dropdown ul a i {
-    font-size: 12px;
+    font-size: 11px;
+    transform: none !important;
   }
 
   .navmenu .dropdown ul a:hover,
+  .navmenu .dropdown ul .active,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
+  .navmenu .dropdown ul li:hover > a {
+    color: #047857;
+    background: #D1FAE5;
+    box-shadow: none;
   }
 
-  .navmenu .dropdown:hover>ul {
+  .navmenu .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
+    transform: translateY(0);
     visibility: visible;
   }
 
   .navmenu .dropdown .dropdown ul {
     top: 0;
-    left: -90%;
+    left: calc(100% + 8px);
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
+  .navmenu .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
-    left: -100%;
+    left: 100%;
     visibility: visible;
   }
 }
 
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
+  .header .container-fluid,
+  .header .container-xl {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .header .logo i {
+    font-size: 20px;
+    margin-right: 6px;
+  }
+
+  .header .logo h1 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+
   .mobile-nav-toggle {
     color: var(--nav-color);
-    font-size: 28px;
+    font-size: 26px;
     line-height: 0;
-    margin-right: 10px;
+    margin-right: 5px;
     cursor: pointer;
     transition: color 0.3s;
   }
@@ -316,24 +365,27 @@ h6 {
   .navmenu ul {
     display: none;
     list-style: none;
-    position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
+    position: fixed;
+    top: 60px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    padding: 12px 0;
     margin: 0;
-    border-radius: 6px;
-    background-color: var(--nav-mobile-background-color);
+    border-radius: 12px;
+    background-color: var(--nav-mobile-background-color, #ffffff);
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 15px 35px rgba(15, 23, 42, 0.2);
   }
 
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-dropdown-color);
-    padding: 10px 20px;
+    padding: 10px 18px;
     font-family: var(--nav-font);
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -344,11 +396,11 @@ h6 {
 
   .navmenu a i,
   .navmenu a:focus i {
-    font-size: 12px;
+    font-size: 11px;
     line-height: 0;
     margin-left: 5px;
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -376,51 +428,122 @@ h6 {
     transform: rotate(180deg);
   }
 
+  /* Mobile Nav Dropdown Submenus */
   .navmenu .dropdown ul {
-    position: static;
+    position: static !important;
     display: none;
-    z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
-    transition: all 0.5s ease-in-out;
+    inset: auto !important;
+    z-index: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    box-shadow: none !important;
+    background-color: rgba(4, 120, 87, 0.06) !important;
+    margin: 6px 12px !important;
+    padding: 6px 0 !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(4, 120, 87, 0.15) !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .navmenu .dropdown ul.dropdown-active,
+  .navmenu .dropdown > .dropdown-active,
+  .navmenu .dropdown.active > ul,
+  .navmenu a.active + ul {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+
+  .navmenu .dropdown ul li a {
+    padding: 8px 16px 8px 24px;
+    font-size: 14px;
+    color: #0F172A;
+  }
+
+  .navmenu .dropdown ul li a:hover,
+  .navmenu .dropdown ul li a.active {
+    color: #047857;
+    background-color: rgba(4, 120, 87, 0.12);
   }
 
   .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
+    margin: 4px 10px;
+    background-color: rgba(4, 120, 87, 0.08);
   }
 
-  .navmenu .dropdown>.dropdown-active {
-    display: block;
-    background-color: rgba(33, 37, 41, 0.03);
+  .navmenu .dropdown ul ul li a {
+    padding-left: 36px;
   }
 
   .mobile-nav-active {
-    overflow: hidden;
+    overflow: hidden !important;
   }
 
   .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
-    position: absolute;
-    font-size: 32px;
-    top: 15px;
-    right: 15px;
-    margin-right: 0;
-    z-index: 9999;
+    color: #ffffff !important;
+    position: fixed !important;
+    font-size: 28px !important;
+    top: 15px !important;
+    right: 15px !important;
+    margin-right: 0 !important;
+    z-index: 9999 !important;
   }
 
   .mobile-nav-active .navmenu {
-    position: fixed;
-    overflow: hidden;
-    inset: 0;
-    background: rgba(33, 37, 41, 0.8);
-    transition: 0.3s;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+    background: rgba(15, 23, 42, 0.85) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    transition: 0.3s ease !important;
+    z-index: 9997 !important;
   }
 
-  .mobile-nav-active .navmenu>ul {
-    display: block;
+  .mobile-nav-active .navmenu > ul {
+    display: block !important;
+    position: fixed !important;
+    top: 60px !important;
+    left: 15px !important;
+    right: 15px !important;
+    bottom: 15px !important;
+    width: auto !important;
+    max-height: calc(100vh - 75px) !important;
+    padding: 12px 0 !important;
+    margin: 0 !important;
+    border-radius: 12px !important;
+    background-color: #ffffff !important;
+    overflow-y: auto !important;
+    transition: 0.3s ease !important;
+    z-index: 9998 !important;
+    box-shadow: 0px 15px 35px rgba(15, 23, 42, 0.25) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .header .container-fluid,
+  .header .container-xl {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .header .logo i {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+
+  .header .logo h1 {
+    font-size: 16px;
+    letter-spacing: -0.3px;
   }
 }
 
@@ -608,6 +731,120 @@ h6 {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# WhatsApp Floating Button
+--------------------------------------------------------------*/
+.whatsapp-float {
+  position: fixed;
+  right: 15px;
+  bottom: 65px;
+  width: 44px;
+  height: 44px;
+  background-color: #25d366;
+  color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 24px;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.45);
+  z-index: 99998;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.whatsapp-float i {
+  color: #ffffff;
+  font-size: 24px;
+  line-height: 0;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover,
+.whatsapp-float:focus {
+  background-color: #20ba5a;
+  color: #ffffff;
+  transform: translateY(-3px) scale(1.08);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float:hover i {
+  transform: rotate(8deg);
+}
+
+/*--------------------------------------------------------------
+# Proportional Mobile Display Adjustments
+--------------------------------------------------------------*/
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .header .logo h1 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section {
+    padding: 45px 0;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .section-title h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+
+  .section-title p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .page-title h1 {
+    font-size: 1.75rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .whatsapp-float {
+    width: 40px;
+    height: 40px;
+    right: 12px;
+    bottom: 60px;
+  }
+
+  .whatsapp-float i {
+    font-size: 22px;
+  }
+
+  .scroll-top {
+    width: 40px;
+    height: 40px;
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .header .logo h1 {
+    font-size: 1.15rem;
+  }
 }
 
 /*--------------------------------------------------------------
