@@ -230,4 +230,116 @@
     selector: '.glightbox'
   });
 
+  /**
+   * Interactive Dynamic Pagination System
+   */
+  function initDynamicPagination() {
+    const paginationContainers = document.querySelectorAll('[data-pagination-group]');
+    
+    paginationContainers.forEach(groupContainer => {
+      const groupName = groupContainer.getAttribute('data-pagination-group');
+      const pages = groupContainer.querySelectorAll('.pagination-page');
+      const paginationNav = document.querySelector(`[data-pagination-nav="${groupName}"]`);
+      
+      if (!pages.length || !paginationNav) return;
+      
+      let totalPages = pages.length;
+      let currentPage = 1;
+      
+      function showPage(pageNum) {
+        if (pageNum < 1) pageNum = 1;
+        if (pageNum > totalPages) pageNum = totalPages;
+        currentPage = pageNum;
+        
+        pages.forEach(p => {
+          const pVal = parseInt(p.getAttribute('data-page'));
+          if (pVal === currentPage) {
+            p.style.display = 'block';
+            p.classList.add('active-page');
+          } else {
+            p.style.display = 'none';
+            p.classList.remove('active-page');
+          }
+        });
+        
+        // Update number buttons active status
+        const numBtns = paginationNav.querySelectorAll('.page-btn[data-page]');
+        numBtns.forEach(btn => {
+          const pVal = parseInt(btn.getAttribute('data-page'));
+          const parentLi = btn.closest('li');
+          if (pVal === currentPage) {
+            btn.classList.add('active');
+            if (parentLi) parentLi.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+            if (parentLi) parentLi.classList.remove('active');
+          }
+        });
+        
+        // Update prev/next state
+        const prevBtn = paginationNav.querySelector('.page-prev');
+        const nextBtn = paginationNav.querySelector('.page-next');
+        
+        if (prevBtn) {
+          if (currentPage === 1) {
+            prevBtn.classList.add('disabled');
+          } else {
+            prevBtn.classList.remove('disabled');
+          }
+        }
+        
+        if (nextBtn) {
+          if (currentPage === totalPages) {
+            nextBtn.classList.add('disabled');
+          } else {
+            nextBtn.classList.remove('disabled');
+          }
+        }
+        
+        if (typeof AOS !== 'undefined') {
+          AOS.refresh();
+        }
+      }
+      
+      // Bind event listeners to page numbers
+      paginationNav.querySelectorAll('.page-btn[data-page]').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetPage = parseInt(this.getAttribute('data-page'));
+          showPage(targetPage);
+          groupContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+      
+      // Bind event listeners to prev/next
+      const prevBtn = paginationNav.querySelector('.page-prev');
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          if (currentPage > 1) {
+            showPage(currentPage - 1);
+            groupContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      }
+      
+      const nextBtn = paginationNav.querySelector('.page-next');
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          if (currentPage < totalPages) {
+            showPage(currentPage + 1);
+            groupContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      }
+      
+      // Initial setup
+      showPage(1);
+    });
+  }
+
+  window.addEventListener('load', initDynamicPagination);
+  document.addEventListener('DOMContentLoaded', initDynamicPagination);
+
 })();

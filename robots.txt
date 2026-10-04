@@ -1,0 +1,9 @@
+# Robots.txt for Ruang Cendikia Website
+User-agent: *
+Allow: /
+
+# Disallow administrative or temporary files if any
+Disallow: /forms/
+
+# Sitemap Location
+Sitemap: https://ruangcendikia.sch.id/sitemap.xml

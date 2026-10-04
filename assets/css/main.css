@@ -786,33 +786,43 @@ body.scrolled .whatsapp-float {
 # Proportional Mobile Display Adjustments
 --------------------------------------------------------------*/
 html, body {
-  overflow-x: hidden;
-  max-width: 100%;
+  overflow-x: hidden !important;
+  max-width: 100% !important;
 }
 
 @media (max-width: 991.98px) {
   .header .logo h1 {
     font-size: 1.3rem;
   }
+  
+  .hero .hero-container {
+    min-height: auto;
+    padding: 130px 0 60px 0;
+  }
 }
 
 @media (max-width: 767.98px) {
   .section {
-    padding: 45px 0;
+    padding: 40px 0;
   }
 
   .section-title {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    padding-bottom: 35px;
   }
 
   .section-title h2 {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.3;
   }
 
   .section-title p {
     font-size: 14px;
     line-height: 1.5;
+  }
+
+  .page-title {
+    padding: 120px 0 50px 0;
   }
 
   .page-title h1 {
@@ -830,9 +840,48 @@ html, body {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+
+  .hero .hero-container {
+    padding: 110px 0 40px 0;
+    text-align: center;
+  }
+
+  .hero .hero-container .hero-content {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .hero .hero-container .hero-content h1 {
+    font-size: 2.1rem;
+    line-height: 1.25;
+  }
+
+  .hero .hero-container .hero-content p {
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+  }
+
+  .hero .hero-container .hero-content .cta-buttons {
+    justify-content: center;
+  }
+
+  .featured-programs .program-image-wrapper {
+    height: 180px;
+  }
+
+  .featured-programs .program-image-wrapper img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 @media (max-width: 575.98px) {
+  .container, .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .whatsapp-float {
     width: 42px;
     height: 42px;
@@ -859,6 +908,92 @@ html, body {
 
   .header .logo h1 {
     font-size: 1.15rem;
+  }
+
+  .hero .hero-container {
+    padding: 95px 0 35px 0;
+  }
+
+  .hero .hero-container .hero-content h1 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  .hero .hero-container .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .hero .hero-container .hero-content .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero .hero-container .hero-content .cta-buttons a {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 20px;
+  }
+
+  .hero .hero-container .stats-card {
+    padding: 20px 15px;
+  }
+
+  .hero .hero-container .stats-card .stats-header h3 {
+    font-size: 1.4rem;
+  }
+
+  .hero .hero-container .stats-card .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .hero .hero-container .stats-card .stats-grid .stat-item {
+    padding: 8px 5px;
+  }
+
+  .hero .hero-container .stats-card .stats-grid .stat-item .stat-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+    margin-right: 8px;
+    border-radius: 10px;
+  }
+
+  .hero .hero-container .stats-card .stats-grid .stat-item .stat-content h4 {
+    font-size: 1.3rem;
+  }
+
+  .hero .hero-container .stats-card .stats-grid .stat-item .stat-content p {
+    font-size: 0.78rem;
+  }
+
+  .about .stat-box {
+    flex: 1 1 calc(33.333% - 10px);
+    min-width: 80px;
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+  }
+
+  .about .stat-box .stat-number {
+    font-size: 1.4rem;
+  }
+
+  .about .stat-box .stat-label {
+    font-size: 0.75rem;
+    letter-spacing: 0;
+  }
+
+  .about .display-6 {
+    font-size: 1.6rem;
+  }
+
+  .about .signature-block {
+    justify-content: center;
+  }
+
+  .form-control, .form-select {
+    font-size: 16px !important;
   }
 }
 
@@ -993,6 +1128,7 @@ section,
   padding: 180px 0 80px 0;
 }
 
+.hero .hero-container .hero-bg,
 .hero .hero-container .video-background {
   position: absolute;
   top: 0;
@@ -1306,6 +1442,42 @@ section,
 
 .about .signature-block img:hover {
   transform: scale(1.05);
+}
+
+.about .about-image-single {
+  position: relative;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about .about-image-single:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.about .about-image-single img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+  border-radius: 1.25rem;
+}
+
+@media (max-width: 992px) {
+  .about .about-image-single {
+    margin-top: 2rem;
+  }
+  .about .about-image-single img {
+    height: 340px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about .about-image-single img {
+    height: 240px;
+  }
 }
 
 .about .image-stack {
@@ -8475,4 +8647,243 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/*--------------------------------------------------------------
+# Modern News Card Design
+--------------------------------------------------------------*/
+.news-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+  transition: all 0.35s ease-in-out;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.news-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+  border-color: rgba(4, 120, 87, 0.3);
+}
+
+.news-card .news-card-img {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+}
+
+.news-card .news-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-card-img img {
+  transform: scale(1.08);
+}
+
+.news-card .news-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 5px 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 20px;
+  color: #ffffff;
+  background: rgba(4, 120, 87, 0.92);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.news-card .news-badge.badge-tech {
+  background: rgba(14, 165, 233, 0.92);
+}
+
+.news-card .news-badge.badge-sports {
+  background: rgba(245, 158, 11, 0.92);
+}
+
+.news-card .news-badge.badge-art {
+  background: rgba(168, 85, 247, 0.92);
+}
+
+.news-card .news-card-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.news-card .news-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.news-card .news-meta i {
+  color: var(--accent-color, #047857);
+}
+
+.news-card .news-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.news-card .news-card-title a {
+  color: #0f172a;
+  transition: color 0.25s ease;
+}
+
+.news-card .news-card-title a:hover {
+  color: var(--accent-color, #047857);
+}
+
+.news-card .news-card-text {
+  font-size: 0.925rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.news-card .news-card-footer {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.news-card .news-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--accent-color, #047857);
+  transition: all 0.25s ease;
+}
+
+.news-card:hover .news-card-link {
+  gap: 10px;
+  color: #065f46;
+}
+
+/*--------------------------------------------------------------
+# SEO, AEO & GEO Custom Enhancement Styling
+--------------------------------------------------------------*/
+.executive-summary-box {
+  background: linear-gradient(135deg, rgba(4, 120, 87, 0.05) 0%, rgba(14, 165, 233, 0.05) 100%);
+  border-left: 4px solid var(--accent-color, #047857);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.executive-summary-box h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent-color, #047857);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.executive-summary-box ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.executive-summary-box li {
+  margin-bottom: 8px;
+  font-size: 0.975rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.executive-summary-box li:last-child {
+  margin-bottom: 0;
+}
+
+.aeo-faq-section {
+  background-color: #f8fafc;
+  border-radius: 12px;
+  padding: 28px;
+  margin-top: 40px;
+  border: 1px solid #e2e8f0;
+}
+
+.aeo-faq-section h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.aeo-faq-item {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+}
+
+.aeo-faq-item:last-child {
+  margin-bottom: 0;
+}
+
+.aeo-faq-item h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.aeo-faq-item h4 i {
+  color: var(--accent-color, #047857);
+  margin-top: 2px;
+}
+
+.aeo-faq-item p {
+  font-size: 0.925rem;
+  color: #475569;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.geo-metrics-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f1f5f9;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: #334155;
 }
